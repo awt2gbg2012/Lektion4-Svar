@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Controller\DefaultController.cs" />
     <Compile Include="Model\Post.cs" />
+    <Compile Include="Model\Repository\EmptyRepository.cs" />
+    <Compile Include="Model\Repository\Abstract\IRepository.cs" />
     <Compile Include="Model\Repository\Repository.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />

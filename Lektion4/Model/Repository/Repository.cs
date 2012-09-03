@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Lektion4.Model.Abstract.Repository;
 
 namespace Lektion4.Model.Repository
 {
-    public class Repository
+    public class Repository : IRepository
     {
         private List<User> users;
         private List<Post> posts;
