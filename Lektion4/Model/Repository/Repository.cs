@@ -71,6 +71,11 @@ namespace Lektion4.Model.Repository
             posts.Remove(postToBeRemoved);
         }
 
+        public List<Post> Get10LatestPosts()
+        {
+            return GetPosts().OrderBy(p => p.CreateDate).Take(10).ToList();
+        }
+
         public User GetUserByUsername(string userName)
         {
             return GetUsers().Where(u => u.UserName == userName).FirstOrDefault();

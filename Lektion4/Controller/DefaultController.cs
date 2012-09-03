@@ -24,7 +24,7 @@ namespace Lektion4.Controller
             {
                 case "?":
                 case "help":
-                    return new ListView("\n\nAvailable Commands:\n\thelp/?:\thelp\n\tlist:\tList Users\n\texit:\tExit Program\n\tadduser:[x]\tAdds a User.");
+                    return new ListView("\n\nAvailable Commands:\n\thelp/?:\thelp\n\tlist:\tList Users\n\texit:\tExit Program\n\tadduser:[x]\tAdds a User.\n\tlistposts\tLists Posts.");
                 case "list":
                     users = Repo.GetUsers().Take(10).ToList();
                     return new ListView(users);
@@ -46,6 +46,9 @@ namespace Lektion4.Controller
                 case "removeuser":
                     // Implementationen för detta är väldigt lik adduser - men du kör istället Repo.RemoveUser(user) ifall användaren existerar
                     return new ListView("\n\nNot Implemented - See Implementation for adduser");
+                case "listposts":
+                    var posts = Repo.Get10LatestPosts();
+                    return new PostView(posts);
                 case "exit":
                     Exit = true;
                     return new ListView("Exiting Program!");
