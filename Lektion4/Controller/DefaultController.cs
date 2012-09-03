@@ -47,7 +47,7 @@ namespace Lektion4.Controller
                     // Implementationen för detta är väldigt lik adduser - men du kör istället Repo.RemoveUser(user) ifall användaren existerar
                     return new ListView("\n\nNot Implemented - See Implementation for adduser");
                 case "listposts":
-                    var posts = Repo.Get10LatestPosts();
+                    var posts = Repo.GetLatestPosts(10);
                     return new PostView(posts);
                 case "exit":
                     Exit = true;
