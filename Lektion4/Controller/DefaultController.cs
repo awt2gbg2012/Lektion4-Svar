@@ -43,6 +43,9 @@ namespace Lektion4.Controller
                         return new ListView("\n\nError: Username already exist");
                     Repo.AddUser(new User() { UserID = Guid.NewGuid(), UserName = inputs[1], Type = User.UserType.User });
                     return new ListView("\n\nUser succesfully added!");
+                case "removeuser":
+                    // Implementationen för detta är väldigt lik adduser - men du kör istället Repo.RemoveUser(user) ifall användaren existerar
+                    return new ListView("\n\nNot Implemented - See Implementation for adduser");
                 case "exit":
                     Exit = true;
                     return new ListView("Exiting Program!");
