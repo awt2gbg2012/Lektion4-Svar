@@ -18,7 +18,7 @@ namespace Lektion4.Controller
             var inputs = Input.Split(new char[] { ':' });
             List<User> users = new List<User>();
 
-            switch (inputs[0])
+            switch (inputs[0].ToLower())
             {
                 case "?":
                 case "help":
