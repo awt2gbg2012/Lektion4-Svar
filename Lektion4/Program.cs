@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Lektion4.Controller;
 using Lektion4.Model.Repository;
+using Lektion4.View.Abstract;
 
 namespace Lektion4
 {
@@ -23,7 +24,7 @@ namespace Lektion4
 
                 input = Console.ReadLine();
 
-                var resultView = defaultController.handleInput(input);
+                IView resultView = defaultController.handleInput(input);
 
                 Console.WriteLine(resultView.Render());
 

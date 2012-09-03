@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Lektion4.Model;
+using Lektion4.View.Abstract;
 
 namespace Lektion4.View
 {
-    public class ListView
+    public class ListView : IView
     {
         private string Message { get; set; }
         private List<User> Users { get; set; }
         public ListView(List<User> users) { Users = users; }
         public ListView(string msg) { Message = msg; }
 
-        internal string Render()
+        public string Render()
         {
             string returnString = "";
             if (!string.IsNullOrEmpty(Message))

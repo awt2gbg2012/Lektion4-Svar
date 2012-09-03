@@ -49,7 +49,9 @@
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Abstract\IView.cs" />
     <Compile Include="View\ListView.cs" />
+    <Compile Include="View\UserDetailsView.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

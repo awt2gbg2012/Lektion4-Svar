@@ -71,6 +71,11 @@ namespace Lektion4.Model.Repository
             posts.Remove(postToBeRemoved);
         }
 
+        public User GetUserByUsername(string userName)
+        {
+            return GetUsers().Where(u => u.UserName == userName).FirstOrDefault();
+        }
+
         // #region gör att allt fram till #endregion kan minimeras till en rad i Visual Studio.
         // Detta nyckelord påverkar inte funktionen hos koden.
         #region Private Helper Methods
